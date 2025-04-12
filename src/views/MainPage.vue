@@ -4,7 +4,7 @@ import FilterSection from '@/components/FilterSection.vue';
 
 <template>
     <main class="">
-        <div class="w-full h-[30vh]">
+        <div class="w-full h-[30vh] relative">
             <FilterSection />
         </div>
     </main>
