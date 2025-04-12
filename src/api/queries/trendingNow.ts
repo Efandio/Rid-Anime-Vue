@@ -67,7 +67,7 @@ export type TrendingNowVariablesQueryType = {
 
 const trendingNowQueryVariables: TrendingNowVariablesQueryType = {
     page: 1,
-    perPage: 10
+    perPage: 50
 };
 
 export { URL, trendingNowQuery, trendingNowQueryVariables }
