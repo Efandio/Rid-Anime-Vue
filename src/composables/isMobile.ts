@@ -10,10 +10,9 @@ export const useIsMobile = () => {
         isMobile.value = window.innerWidth <= 768;
     };
 
-    check()
-
     onMounted(() => {
-        addEventListener('resize', check)
+        check();
+        addEventListener('resize', check);
     });
 
     onUnmounted(() => {
