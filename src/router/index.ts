@@ -1,4 +1,5 @@
 import MainPage from '@/views/MainPage.vue'
+import TrendingNowPage from '@/views/TrendingNowPage.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -8,6 +9,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: MainPage,
+    },
+    {
+      path: '/trending-now',
+      name: 'trending',
+      component: TrendingNowPage,
     },
   ],
 })

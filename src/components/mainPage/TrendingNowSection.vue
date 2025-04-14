@@ -2,6 +2,7 @@
 
 import { onMounted, reactive } from 'vue';
 import Badge from '../ui/badge/Badge.vue';
+import Button from '../ui/button/Button.vue';
 import { Card } from '../ui/card';
 import { animeFetcher } from '@/api/fetcher';
 import { trendingNowQuery, trendingNowQueryVariables } from '@/api/queries/trendingNow';
@@ -34,7 +35,10 @@ const mobile = useIsMobile()
 
 <template>
     <main>
-        <Badge class="lg:ml-20">Trending Now</Badge>
+        <div class="w-full flex justify-between px-2 lg:px-20">
+            <Badge class="">Trending Now</Badge>
+            <Button class="text-xs cursor-pointer">See All</Button>
+        </div>
         <div v-if="data.loading">Loading...</div>
         <div v-if="data.error">Error...</div>
         <div v-if="mobile" class="flex overflow-x-auto gap-5 w-full justify-center mt-2">
