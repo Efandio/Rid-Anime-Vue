@@ -23,20 +23,22 @@ const mobile = useIsMobile();
     <main>
         <div class="w-full flex justify-between px-2 lg:px-20">
             <Badge class="">Trending Now</Badge>
-            <Button class="text-xs cursor-pointer">See All</Button>
+            <RouterLink to="/trending-now">
+                <Button class="text-xs cursor-pointer">See All</Button>
+            </RouterLink>
         </div>
         <div v-if="loading">Loading...</div>
         <div v-if="error">Error...</div>
         <div v-if="mobile" class="flex overflow-x-auto gap-5 w-full justify-center mt-2">
-            <Card class="w-42 grid grid-cols-1 justify-items-center px-2 bg-transparent text-white" v-for="anime in trendingAnime.trendingAnimeList?.Page.media.slice(0, 3)" :key="anime.id">
+            <Card class="w-42 grid grid-cols-1 justify-items-center px-2 bg-transparent text-white cursor-pointer" v-for="anime in trendingAnime.trendingAnimeList?.Page.media.slice(0, 3)" :key="anime.id">
                 <img class="w-20 h-32" :src="anime.coverImage.large || undefined" alt="">
-                <h1 class="text-sm">{{ anime.title.english?.slice(0, 15) + '...' }}</h1>
+                <h1 class="text-sm font-medium">{{ anime.title.english?.slice(0, 15) + '...' }}</h1>
             </Card>
         </div>
         <div v-else class="flex overflow-x-auto gap-5 w-full justify-center mt-4">
-            <Card class="w-42 grid grid-cols-1 justify-items-center px-2 bg-transparent text-white" v-for="anime in trendingAnime.trendingAnimeList?.Page.media.slice(0, 6)" :key="anime.id">
+            <Card class="w-42 grid grid-cols-1 justify-items-center px-2 bg-transparent text-white cursor-pointer" v-for="anime in trendingAnime.trendingAnimeList?.Page.media.slice(0, 6)" :key="anime.id">
                 <img class="lg:w-32 lg:h-48" :src="anime.coverImage.large || undefined" alt="">
-                <h1 class="text-sm">{{ anime.title.english?.slice(0, 30) + '...' }}</h1>
+                <h1 class="text-sm font-medium">{{ anime.title.english?.slice(0, 30) + '...' }}</h1>
             </Card>
         </div>
     </main>
