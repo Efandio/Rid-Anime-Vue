@@ -1,7 +1,7 @@
 # Anime Website (Still in development 🚧🚧🚧)
 
 This is a simple Anime Information Website built using data from Anilist GraphQL API.
-API Docs: https://docs.anilist.co/
+#### API Docs: https://docs.anilist.co/
 
 ## Tech Stack
 - Vue 3
