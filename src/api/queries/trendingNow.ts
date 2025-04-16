@@ -62,7 +62,7 @@ const trendingNowQuery = `
 
 export type TrendingNowVariablesQueryType = {
     page: number,
-    perPage: number
+    perPage: number,
 };
 
 const trendingNowQueryVariables: TrendingNowVariablesQueryType = {

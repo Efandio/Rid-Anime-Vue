@@ -9,6 +9,7 @@ const props = defineProps<{
 
 <template>
   <div
+    @click="$emit('click')"
     data-slot="card"
     :class="
       cn(
